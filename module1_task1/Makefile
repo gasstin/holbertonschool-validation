@@ -9,7 +9,8 @@ build :
 	mkdir module1_task1/themes/ananke
 	cd module1_task1/themes/gohugo-theme-ananke && mv * ../ananke/
 	cd module1_task1/themes && rm -rf gohugo-theme-ananke
-	cd ..
+	cd ../module1_task1/module1_task1 && mv * ../
+	rm -rf ../module1_task1/module1_task1
 	hugo
 
 post:
