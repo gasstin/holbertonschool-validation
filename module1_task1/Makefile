@@ -14,7 +14,7 @@ build :
 	hugo
 
 post:
-	cd dist/ && hugo new posts/$(POST_NAME).md
+	hugo new posts/$(POST_NAME).md
 
 clean :
 	rm -rf dist/ go.mod public/ resources/
