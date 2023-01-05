@@ -8,9 +8,9 @@ build :
 	echo "publishDir = \"dist/\"" >> module1_task1/config.toml
 	cd module1_task1/themes && git clone https://github.com/theNewDynamic/gohugo-theme-ananke.git
 	mkdir module1_task1/themes/ananke
-	cd module1_task1/themes/gohugo-theme-ananke && mv * ../ananke/
+	cd module1_task1/themes/gohugo-theme-ananke && mv -u * ../ananke/
 	cd module1_task1/themes && rm -rf gohugo-theme-ananke
-	cd ../module1_task1/module1_task1 && mv * ../
+	cd ../module1_task1/module1_task1 && mv -u * ../
 	rm -rf ../module1_task1/module1_task1
 	hugo
 
