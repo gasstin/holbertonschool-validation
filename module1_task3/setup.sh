@@ -4,4 +4,4 @@ apt-get  install hugo
 apt-get install make
 make build
 exit
-1>&2 echo "recipe for target 'build' failed"
+2>&1 echo "recipe for target 'build' failed"
