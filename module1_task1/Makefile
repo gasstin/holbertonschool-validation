@@ -1,21 +1,7 @@
 .PHONY: build clean post
 
 build :
-	rm -rf go.mod public/ resources/
-	rm -rf static/ themes/ data/ layouts/ config.toml content/ archetypes/ \
-		assets/
-	hugo new site module1_task1
-	hugo mod init github.com/gasstin/module1_task1
-	echo "theme = \"ananke"\" >> module1_task1/config.toml
-	echo "publishDir = \"dist/\"" >> module1_task1/config.toml
-	cd module1_task1/themes && git clone https://github.com/theNewDynamic/gohugo-theme-ananke.git
-	mkdir module1_task1/themes/ananke
-	cd module1_task1/themes/gohugo-theme-ananke && mv -u * ../ananke/
-	cd module1_task1/themes && rm -rf gohugo-theme-ananke
-	cd ../module1_task1/module1_task1 && mv -u * ../
-	rm -rf ../module1_task1/module1_task1
-	hugo
-
+	hugo > /dev/null 2>&1
 post:
 	hugo new posts/$(POST_NAME).md
 	sed -i 's/title:.*/title: \"$(POST_TITLE)\"/g' ./content/posts/$(POST_NAME).md
