@@ -1,7 +1,7 @@
 .PHONY: build clean post
 
-
 build :
+	rm -rf go.mod public/ resources/
 	hugo new site module1_task1
 	hugo mod init github.com/gasstin/module1_task1
 	echo "theme = \"ananke"\" >> module1_task1/config.toml
