@@ -9,7 +9,7 @@ post :
 	sed -i 's/title:.*/title: \"$(POST_TITLE)\"/g' ./content/posts/$(POST_NAME).md
 
 clean : 
-## clean: Clean the dist directory
+## clean: Clean the site's directory
 	rm -rf dist/
 
 help: 
