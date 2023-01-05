@@ -8,6 +8,7 @@
 2. Clone the theme in theme directory
 3. Add the theme to `config.toml` file
 4. Use `make build ` to create the webpage
+5. Use `make post` to create a new post. `post` use two variables: `PATH_TITLE, PATH_NAME` like information to the post.
 5. Use `make clean` to remove the dist
 
 Use `make help` if you need help
