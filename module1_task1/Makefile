@@ -1,5 +1,6 @@
 .PHONY: build clean post
 
+
 build :
 	hugo new site module1_task1
 	hugo mod init github.com/gasstin/module1_task1
