@@ -1,13 +1,14 @@
 .PHONY: build clean post
 
 build :
-	hugo new site dist
-	hugo mod init github.com/gasstin/module1_task1/dist
-	echo "theme = \"ananke"\" >> dist/config.toml
-	cd dist/themes && git clone https://github.com/theNewDynamic/gohugo-theme-ananke.git
-	mkdir dist/themes/ananke
-	cd dist/themes/gohugo-theme-ananke && mv * ../ananke/
-	cd dist/themes && rm -rf gohugo-theme-ananke
+	hugo new site module1_task1
+	hugo mod init github.com/gasstin/module1_task1
+	echo "theme = \"ananke"\" >> module1_task1/config.toml
+	echo "publishDir = \"dist/\"" >> module1_task1/config.toml
+	cd module1_task1/themes && git clone https://github.com/theNewDynamic/gohugo-theme-ananke.git
+	mkdir module1_task1/themes/ananke
+	cd module1_task1/themes/gohugo-theme-ananke && mv * ../ananke/
+	cd module1_task1/themes && rm -rf gohugo-theme-ananke
 	cd ..
 	hugo
 
