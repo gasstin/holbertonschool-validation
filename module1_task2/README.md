@@ -1,0 +1,13 @@
+## Prerequisites
+* Install Go (version >= 1.14)
+* Install Hugo (extenden edition recomendend)
+* Install Git
+
+## Lifecycle
+1. Create the hugo new site
+2. Clone the theme in theme directory
+3. Add the theme to `config.toml` file
+4. Use `make build ` to create the webpage
+5. Use `make clean` to remove the dist
+
+Use `make help` if you need help
