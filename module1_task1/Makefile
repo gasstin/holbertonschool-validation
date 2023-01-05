@@ -1,5 +1,3 @@
-.PHONY: build clean post
-
 build :
 	hugo > /dev/null 2>&1
 post:
