@@ -1,7 +1,9 @@
 .PHONY: build clean post
 
 build :
-	rm -rf go.mod public/ resources/ archetypes/ themes/
+	rm -rf go.mod public/ resources/
+	rm -rf static/ themes/ data/ layouts/ config.toml content/ archetypes/ \
+		assets/
 	hugo new site module1_task1
 	hugo mod init github.com/gasstin/module1_task1
 	echo "theme = \"ananke"\" >> module1_task1/config.toml
@@ -16,6 +18,7 @@ build :
 
 post:
 	hugo new posts/$(POST_NAME).md
+	sed -i 's/title:.*/title: \"$(POST_TITLE)\"/g' ./content/posts/$(POST_NAME).md
 
 clean :
 	rm -rf dist/ go.mod public/ resources/
