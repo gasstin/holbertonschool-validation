@@ -1,5 +1,4 @@
 build :  
-## build: Generates the website
 	hugo > /dev/null 2>&1
 
 post : 
