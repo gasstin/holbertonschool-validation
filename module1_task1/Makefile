@@ -5,7 +5,9 @@ build :
 	hugo mod init github.com/gasstin/module1_task1/dist
 	echo "theme = \"ananke"\" >> dist/config.toml
 	cd dist/themes && git clone https://github.com/theNewDynamic/gohugo-theme-ananke.git
-	mv dist/themes/gohugo-theme-ananke dist/themes/ananke
+	mkdir dist/themes/ananke
+	cd dist/themes/gohugo-theme-ananke && mv * ../ananke/
+	cd dist/themes && rm -rf gohugo-theme-ananke
 	cd ..
 	hugo
 
