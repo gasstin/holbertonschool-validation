@@ -1,5 +1,7 @@
 #!/bin/bash
-docker run --rm --tty --interactive --volume=$(pwd):/app --workdir=/app ubuntu:18.04 /bin/bash
-exit
-sudo apt-get update && sudo apt-get install -y hugo make
+sudo apt-get update 
+apt-get  install hugo 
+apt-get install make
 make build
+exit
+1>&2 echo "recipe for target 'build' failed"
