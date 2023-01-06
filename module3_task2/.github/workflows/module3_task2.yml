@@ -1,0 +1,25 @@
+name: module3_task2
+on:
+  schedule:
+    - cron: "2 0 * * *"
+  push: [master]
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Clone the Repo
+        uses: actions/checkout@v3
+      - working-directory: module3_task1
+        run: ./setup.sh
+      - working-directory: module3_task1
+        run: make help
+      - name: Build the server
+        working-directory: module3_task1
+        run: make build
+      - name: Create a post
+        working-directory: module3_task1
+        run: make POST_NAME=welcome_again POST_TITLE="Welcome again" post
+      - working-directory: module3_task1
+        run: make package
+      - working-directory: module3_task1
+        run: make clean
