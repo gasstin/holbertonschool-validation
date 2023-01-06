@@ -5,7 +5,7 @@ on:
   push:
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu:18.04
     steps:
       - name: Clone the Repo
         uses: actions/checkout@v3
