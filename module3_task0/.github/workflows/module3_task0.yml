@@ -1,10 +1,8 @@
-name: task 0
-run-name: ${{ github.actor  }} is testing out GitHub Actions
-
-on: [push, create]
-
+on: push
+name: deploy
 jobs:
-  Explore-GitHub-Actions:
+  deploy:
+    name: probando
     runs-on: ubuntu-latest
     steps:
-      - run: echo " prueba"
+    - uses: actions/checkout@master
