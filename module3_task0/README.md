@@ -16,4 +16,7 @@
 
 --
 
+## Workflow
+* Clone the repository.
+* Check the clonation with `make help` command.
 Use `make help` if you need help
