@@ -2,7 +2,7 @@ name: module3_task2
 on:
   schedule:
     - cron: "2 0 * * *"
-  push: 
+  push:
 jobs:
   deploy:
     runs-on: ubuntu-18.04
