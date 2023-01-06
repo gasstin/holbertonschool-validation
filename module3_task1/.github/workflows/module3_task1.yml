@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Clone the Repo
         uses: actions/checkout@v3
-      - working-directory: module3_task1 
+      - working-directory: module3_task1
         run: ./setup.sh
       - working-directory: module3_task1
         run: make help
