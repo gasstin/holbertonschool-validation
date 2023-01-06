@@ -5,4 +5,5 @@ tar -zxf hugo.tar.gz -C /usr/local/bin
 rm /usr/local/bin/README.md
 rm /usr/local/bin/LICENSE
 rm hugo.tar.gz
+apt-get install -y make
 exit 0
