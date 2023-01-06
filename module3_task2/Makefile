@@ -9,7 +9,7 @@ post :
 
 clean :
 ## clean: Clean the site's directory
-rm -rf dist/ awesome-website.zip
+	rm -rf dist/ awesome-website.zip
 
 package: 
 ## package: produces a file awesome-website.zip, containing the binary awesome-api and the directory dist
