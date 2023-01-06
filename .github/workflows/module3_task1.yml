@@ -18,7 +18,7 @@ jobs:
         run: make build
       - name: Create a post
         working-directory: module3_task1
-        run: make POST_NAME=welcome POST_TITLE="Welcome" post
+        run: make POST_NAME=welcome_again POST_TITLE="Welcome again" post
       - working-directory: module3_task1
         run: make clean
       - working-directory: module3_task1
