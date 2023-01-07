@@ -17,6 +17,8 @@
 8. Use `make clean` to clean the dist directory.
 
 --
+Not implemented yet:
+* unit-tests
 
 ## Workflow
 * Clone the repository.
