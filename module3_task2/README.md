@@ -14,7 +14,7 @@
 5. Use `make post` to create a new post. `post` use two variables: `PATH_TITLE, PATH_NAME`  
   like information to the post.
 6. Use `make package`
-    * create a zip file with the dist directory & awesome-api binary file.
+    * create a zip with the dist directory & awesome-api binary file.
 7. Use `make lint` to update README.md and DEPLOY.md to lint
 8. Use `make clean` to clean the dist directory.
 
