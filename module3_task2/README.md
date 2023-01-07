@@ -20,6 +20,7 @@
 ## Not implemented yet:
 * unit-tests
 * integration-tests
+* validate
 
 ## Workflow
 * Clone the repository.
