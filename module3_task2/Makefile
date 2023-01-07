@@ -19,4 +19,4 @@ help: ## shows commands
 
 unit-tests: ## ERROR: No comment found for target unit-tests in ./Makefile
 
-
+integration-tests: ## ERROR: No comment found for target integration-tests in ./Makefile
