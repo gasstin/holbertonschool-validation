@@ -9,17 +9,22 @@ jobs:
     steps:
       - name: Clone the Repo
         uses: actions/checkout@v3
-      - working-directory: module3_task1
+      - working-directory: module3_task2
         run: ./setup.sh
-      - working-directory: module3_task1
+      - working-directory: module3_task2
         run: make help
       - name: Build the server
-        working-directory: module3_task1
+        working-directory: module3_task2
         run: make build
       - name: Create a post
-        working-directory: module3_task1
+        working-directory: module3_task2
         run: make POST_NAME=welcome_again POST_TITLE="Welcome again" post
-      - working-directory: module3_task1
+      - working-directory: module3_task2
         run: make package
-      - working-directory: module3_task1
+      - uses: actions/upload-artifact@v3
+        working-directory: module3_task2
+	with:
+          name: my-artifact
+          path: ./.github/workflows/module3-task2.yml
+      - working-directory: module3_task2
         run: make clean
