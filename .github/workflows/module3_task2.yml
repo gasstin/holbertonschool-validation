@@ -1,7 +1,7 @@
 name: module3_task2
 on:
   schedule:
-    - cron: "2 0 * * *"
+    - cron: "0 2 * * *"
   push:
 jobs:
   deploy:
@@ -19,10 +19,14 @@ jobs:
       - name: Create a post
         working-directory: module3_task2
         run: make POST_NAME=welcome_again POST_TITLE="Welcome again" post
-      - working-directory: module3_task2
+      - name: Use Package
+        working-directory: module3_task2
         run: make package
-      - run: echo "artifactPath=module3_task2/.github/workflows/module3_task2.yml" >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v3
-	env:
-          name: my-artifact
-          path: ${{ env.artifactPath }}
+      - name: Use lint
+        working-directory: module3_task2
+        run: make lint
+      - name: Save workflow
+        uses: actions/upload-artifact@v3
+	with:
+          name: artifact
+          path: module3_task2/.github/workflows/module3_task2.yml
