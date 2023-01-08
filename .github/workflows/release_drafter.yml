@@ -1,0 +1,5 @@
+runs-on: ubuntu-18.04
+template: |
+  ## What’s Changed
+
+  $CHANGES
