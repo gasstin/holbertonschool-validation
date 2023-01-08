@@ -26,4 +26,4 @@ hello world.
 
 The file `awesome-website.zip` contains the binary file `awesome-api`.
 
-The app now has a Tag with the version for deploy it.
+The app now has a GitHub tag with the version for deploy it.
