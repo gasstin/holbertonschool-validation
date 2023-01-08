@@ -17,8 +17,7 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-18.04
     steps:
-     - working-directory: module3_task4/ 
-       uses: release-drafter/release-drafter@v5
+     - uses: release-drafter/release-drafter@v5
        with:
          config-name: release-drafter.yml
          disable-autolabeler: true
