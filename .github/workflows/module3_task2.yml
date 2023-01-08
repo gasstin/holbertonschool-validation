@@ -21,7 +21,8 @@ jobs:
         run: make POST_NAME=welcome_again POST_TITLE="Welcome again" post
       - working-directory: module3_task2
         run: make package
+      - run: echo "artifactPath=module3_task2/.github/workflows/module3_task2.yml" >> $GITHUB_ENV
       - uses: actions/upload-artifact@v3
 	env:
           name: my-artifact
-          path: module3_task2/.github/workflows/module3_task2.yml
+          path: ${{ env.artifactPath }}
