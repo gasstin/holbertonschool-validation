@@ -31,9 +31,9 @@ jobs:
       - name: Use integration-tests
         working-directory: module3_task2
         run: make integration-tests
-      - name: Use validation
+      - name: Use validate
         working-directory: module3_task2
-        run: make validation
+        run: make validate
       - name: Save workflow
         uses: actions/upload-artifact@v3
         with:
