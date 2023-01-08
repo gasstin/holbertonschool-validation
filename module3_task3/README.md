@@ -31,4 +31,7 @@
 * Clone the repository.
 * Use `make build`
 
+## GitHub Tag
+* GitHub Tag now present to show the working version
+
 Use `make help` if you need help
