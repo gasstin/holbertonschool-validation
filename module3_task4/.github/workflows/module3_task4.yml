@@ -3,7 +3,7 @@ on:
   schedule:
     - cron: "0 2 * * *"
   push:
-  
+
   pull_request:
     types: [opened, reopened]
 jobs:
