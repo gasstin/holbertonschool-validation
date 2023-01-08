@@ -1,5 +1,23 @@
-runs-on: ubuntu-18.04
-template: |
-  ## What’s Changed
+name: Release Drafter
 
-  $CHANGES
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+permissions:
+  contents: read
+
+jobs:
+  update_release_draft:
+    permissions:
+      contents: write
+      pull-requests: write
+    runs-on: ubuntu-18.04
+    steps:
+     - working-directory: module3_task4/ 
+       uses: release-drafter/release-drafter@v5
+       env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
