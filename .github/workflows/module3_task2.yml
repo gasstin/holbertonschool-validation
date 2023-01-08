@@ -27,6 +27,6 @@ jobs:
         run: make lint
       - name: Save workflow
         uses: actions/upload-artifact@v3
-	with:
-          name: artifact
-          path: module3_task2/.github/workflows/module3_task2.yml
+        with:
+          name: artifact-task2
+          path: module3_task2/
