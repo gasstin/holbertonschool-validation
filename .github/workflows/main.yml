@@ -1,8 +1,0 @@
-on: [push]
-jobs:
-  deploy:
-    name: probando
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - run: cd module3_task0 && make help
