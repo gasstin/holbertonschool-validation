@@ -4,7 +4,7 @@ on:
     - cron: "0 2 * * *"
   push:
 
-pull_request:
+  pull_request:
     types: [opened, reopened]
 
 jobs:
