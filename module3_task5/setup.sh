@@ -8,6 +8,5 @@ rm hugo.tar.gz
 apt-get install -y make
 sudo npm install -g markdownlint-cli
 npm install netlify-cli --save-dev
-netlify init
 export NETLIFY_AUTH_TOKEN=Un7_qxnY6aZqDCTAzW8Wrlqnvp0vEExuq3U8vaZurvE
 exit 0
