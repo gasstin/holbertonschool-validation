@@ -1,5 +1,5 @@
 build: ## Creates the site.
-	hugo > /dev/null 2>&1
+	docker run klakegg/hugo hugo > /dev/null 2>&1
 
 clean: ## ERROR: No comment found for target clean in ./Makefile
 	rm -fr dist awesome-website.zip
