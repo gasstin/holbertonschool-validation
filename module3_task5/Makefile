@@ -1,6 +1,5 @@
 build: ## Creates the site.
 	hugo > /dev/null 2>&1
-	netlify sites:create
 
 clean: ## ERROR: No comment found for target clean in ./Makefile
 	rm -fr dist awesome-website.zip
