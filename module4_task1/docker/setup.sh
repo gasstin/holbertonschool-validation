@@ -10,6 +10,7 @@ rm /usr/local/bin/LICENSE
 apt-get install -y make
 # install node
 apt install nodejs
+Y
 npm install -g markdownlint-cli
 # remove go
 rm -rf /usr/local/go/bin/go
