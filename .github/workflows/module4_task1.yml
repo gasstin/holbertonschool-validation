@@ -13,7 +13,7 @@ jobs:
       - name: Clone the Repo
         uses: actions/checkout@v3
       - working-directory: module4_task1
-        run: ./setup.sh
+        run: ./docker/setup.sh
       - working-directory: module4_task1
         run: make help
       - name: Build the server
