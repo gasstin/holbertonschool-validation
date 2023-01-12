@@ -1,5 +1,6 @@
 build: ## Creates the site.
-	docker run -it golang:1.15.8-buster bin/bash/ && hugo > /dev/null 2>&1
+	docker run -it golang:1.15.8-buster bin/bash/
+	hugo > /dev/null 2>&1
 	touch awesome-api
 
 clean: ## ERROR: No comment found for target clean in ./Makefile
