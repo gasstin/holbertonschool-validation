@@ -8,7 +8,7 @@ sudo apt-get update
 # rm hugo.tar.gz
 # install make #
 sudo apt-get install -y make
-sudo npm install -g markdownlint-cli
+#sudo npm install -g markdownlint-cli
 which go
 # sudo rm -rf /usr/bin/go
 # which go
