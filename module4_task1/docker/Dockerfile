@@ -4,4 +4,5 @@ COPY ./ /app
 
 WORKDIR /app
 
-RUN setup.sh
+RUN ls &&\
+    setup.sh
