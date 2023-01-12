@@ -1,7 +1,8 @@
 FROM golang:1.15.8-buster
 
-COPY ./ /app
-
 WORKDIR /app
 
-RUN ./setup.sh
+RUN apt-get install -y make &&\
+    apt install nodejs &&\
+    Y &&\
+    npm install -g markdownlint-cli

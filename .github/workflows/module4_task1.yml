@@ -42,7 +42,7 @@ jobs:
         with:
           name: artifact-task1
           path: module4_task1/
-      - name: Release task0
+      - name: Release task1
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
