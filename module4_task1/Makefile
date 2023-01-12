@@ -1,3 +1,5 @@
+.PHONY: all build clean
+
 build: ## Creates the site.
 	hugo > /dev/null 2>&1
 	touch awesome-api
@@ -27,4 +29,4 @@ integration-tests: ## ERROR: No comment found for target integration-tests in ./
 validate: ## ERROR: No comment found for target validate in ./Makefile
 
 build-docker: ## build a docker image from Dockerfile
-	docker build -t awesome:build ./docker
+	docker build -t awesome:build ./build
