@@ -10,4 +10,7 @@ rm hugo.tar.gz
 # install make #
 sudo apt-get install -y make
 sudo npm install -g markdownlint-cli
+which go
+docker version | grep -q Server && echo OK
+which hugo
 exit 0
