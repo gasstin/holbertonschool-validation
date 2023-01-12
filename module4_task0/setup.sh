@@ -9,6 +9,9 @@ rm /usr/local/bin/LICENSE
 # install make #
 sudo apt-get install -y make
 sudo npm install -g markdownlint-cli
+# remove go
 which go
+sudo rm -rf /usr/local/go/bin/go
+sudo rm -rf /usr/bin/go
 which hugo
 exit 0
