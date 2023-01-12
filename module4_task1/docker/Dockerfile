@@ -1,8 +1,7 @@
 FROM golang:1.15.8-buster
 
-COPY ./ /app
+COPY ./setup.sh /app
 
 WORKDIR /app
 
-RUN ls &&\
-    setup.sh
+RUN ./setup.sh

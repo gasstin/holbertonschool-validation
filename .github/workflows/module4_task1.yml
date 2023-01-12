@@ -40,7 +40,7 @@ jobs:
       - name: Save workflow
         uses: actions/upload-artifact@v3
         with:
-          name: artifact-task0
+          name: artifact-task1
           path: module4_task1/
       - name: Release task0
         uses: softprops/action-gh-release@v1
