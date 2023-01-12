@@ -42,7 +42,7 @@ jobs:
         with:
           name: artifact-task0
           path: module4_task0/
-      - name: Release task5
+      - name: Release task0
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
@@ -63,4 +63,3 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         timeout-minutes: 1
-        run: make integration-tests
