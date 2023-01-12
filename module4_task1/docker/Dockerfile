@@ -1,6 +1,6 @@
 FROM golang:1.15.8-buster
 
-COPY ../* /docker
+COPY ../dist /docker
 
 WORKDIR /docker
 
