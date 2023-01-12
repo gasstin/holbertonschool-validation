@@ -10,7 +10,7 @@ rm hugo.tar.gz
 sudo apt-get install -y make
 sudo npm install -g markdownlint-cli
 which go
-rm -rf /usr/bin/go
+sudo rm -rf /usr/bin/go
 which go
 docker version | grep -q Server && echo OK
 which hugo
