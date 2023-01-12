@@ -8,6 +8,8 @@ rm /usr/local/bin/LICENSE
 # rm hugo.tar.gz
 # install make #
 apt-get install -y make
+# install node
+apt install nodejs
 npm install -g markdownlint-cli
 # remove go
 rm -rf /usr/local/go/bin/go
