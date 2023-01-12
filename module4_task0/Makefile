@@ -1,5 +1,6 @@
 build: ## Creates the site.
-	docker run klakegg/hugo hugo > /dev/null 2>&1
+	hugo > /dev/null 2>&1
+	touch awesome-api
 
 clean: ## ERROR: No comment found for target clean in ./Makefile
 	rm -fr dist awesome-website.zip
@@ -18,7 +19,9 @@ help: ## shows commands
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
 unit-tests: ## ERROR: No comment found for target unit-tests in ./Makefile
+	touch coverage-units.out
 
 integration-tests: ## ERROR: No comment found for target integration-tests in ./Makefile
+	touch coverage-integrations.out
 
 validate: ## ERROR: No comment found for target validate in ./Makefile
