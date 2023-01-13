@@ -5,7 +5,11 @@ COPY ./ /app
 WORKDIR /app
 
 RUN apt-get install -y make &&\
-    apt-get install zip &&\
+    apt-get install  apt-get install -y p7zip \
+    p7zip-full \
+    unace \
+    zip \
+    unzip &&\
     curl --silent --location -fsSL https://deb.nodesource.com/setup_14.x | bash - &&\
     apt-get install -y nodejs &&\
     url=$(curl -s "https://api.github.com/repositories/11180687/releases/latest" | grep -o 'https://.*hugo_extended.*_Linux-64bit.tar.gz') &&\
