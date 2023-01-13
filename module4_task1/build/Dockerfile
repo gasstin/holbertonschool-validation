@@ -14,4 +14,4 @@ RUN apt-get install -y make &&\
     rm /usr/local/bin/LICENSE &&\
     rm hugo.tar.gz &&\
     which hugo &&\
-    hugo mod init  github.com/gasstin/module4_task1 &&\
+    hugo mod init  github.com/gasstin/module4_task1
