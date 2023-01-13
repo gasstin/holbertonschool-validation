@@ -14,4 +14,6 @@ RUN apt-get install -y make &&\
     rm /usr/local/bin/LICENSE &&\
     rm hugo.tar.gz &&\
     which hugo &&\
+    npm install -g markdownlint-cli &&\
+    which markdownlint &&\
     hugo mod init  github.com/gasstin/module4_task1

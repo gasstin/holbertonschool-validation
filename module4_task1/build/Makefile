@@ -8,7 +8,6 @@ clean: ## ERROR: No comment found for target clean in ./Makefile
 	rm -fr dist awesome-website.zip
 
 lint: ## update files README.md and DEPLOY.md to markdownlint
-	npm install -g markdownlint-cli
 	markdownlint --fix DEPLOY.md
 
 help: ## shows commands
