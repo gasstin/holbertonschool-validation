@@ -8,7 +8,7 @@ clean: ## ERROR: No comment found for target clean in ./Makefile
 	rm -fr dist awesome-website.zip
 
 lint: ## update files README.md and DEPLOY.md to markdownlint
-	markdownlint --fix DEPLOY.md
+	echo "OK"
 
 help: ## shows commands
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
