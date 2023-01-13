@@ -16,6 +16,8 @@ RUN apt-get install -y make &&\
     which hugo &&\
     hugo mod init github.com/gasstin/app &&\
     ls &&\
+    which config.toml &&\
+    echo "aaaaa" &&\
     echo "theme = [\"github.com/theNewDynamic/gohugo-theme-ananke\"]" >> config.toml && \
     echo "publishDir = \"dist\"" >> config.toml &&\
     echo "fffff" &&\
