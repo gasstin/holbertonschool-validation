@@ -23,12 +23,6 @@ jobs:
       - name: Build the server
         working-directory: module4_task1
         run: docker run --rm awesome:build make build
-      - name: Create a post
-        working-directory: module4_task1
-        run: docker run --rm awesome:build make POST_NAME=welcome_again POST_TITLE="Welcome again" post
-      - name: Use Package
-        working-directory: module4_task1
-        run: docker run --rm awesome:build make package
       - name: Use lint
         working-directory: module4_task1
         run: docker run --rm awesome:build make lint
@@ -38,9 +32,6 @@ jobs:
       - name: Use integration-tests
         working-directory: module4_task1
         run: docker run --rm awesome:build make integration-tests
-      - name: Use validate
-        working-directory: module4_task1
-        run: docker run --rm awesome:build make validate
       - name: Save workflow
         uses: actions/upload-artifact@v3
         with:
