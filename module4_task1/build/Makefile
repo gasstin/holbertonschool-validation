@@ -8,7 +8,7 @@ clean: ## ERROR: No comment found for target clean in ./Makefile
 	rm -fr dist awesome-website.zip
 
 post: ## Creates a post with given POST_NAME and POST_TITLE.
-	ls
+	mkdir -p content/posts
 	hugo new posts/${POST_NAME}.md
 	sed -i '/title/c\title: "${POST_TITLE}"' content/posts/${POST_NAME}.md
 
