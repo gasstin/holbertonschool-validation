@@ -5,7 +5,7 @@ COPY ./ /app
 WORKDIR /app
 
 RUN apt-get install -y make &&\
-    apt-get install  apt-get install -y p7zip \
+    apt-get install -y p7zip \
     p7zip-full \
     unace \
     zip \
