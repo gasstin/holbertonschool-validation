@@ -13,4 +13,4 @@ RUN apt-get install -y make &&\
     rm /usr/local/bin/README.md &&\
     rm /usr/local/bin/LICENSE &&\
     rm hugo.tar.gz &&\
-    npm install -g markdownlint-cli &&\
+    npm install -g markdownlint-cli
