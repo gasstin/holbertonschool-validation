@@ -3,5 +3,5 @@ FROM golang:1.15.8-buster
 WORKDIR /app
 
 RUN apt-get install -y make &&\
-    apk add nodejs npm &&\
+    curl -fsSL https://rpm.nodesource.com/setup_14.x | bash - &&\
     npm install -g markdownlint-cli
