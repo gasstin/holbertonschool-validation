@@ -7,14 +7,6 @@ build: ## Creates the site.
 clean: ## ERROR: No comment found for target clean in ./Makefile
 	rm -fr dist awesome-website.zip
 
-post: ## Creates a post with given POST_NAME and POST_TITLE.
-	mkdir -p content/posts
-	hugo new posts/${POST_NAME}.md
-	sed -i '/title/c\title: "${POST_TITLE}"' content/posts/${POST_NAME}.md
-
-package: ## produces a file awesome-website.zip, containing the binary awesome-api and the directory dist
-	zip -r awesome-website.zip dist/ awesome-api
-
 lint: ## update files README.md and DEPLOY.md to markdownlint
 	npm install -g markdownlint-cli
 	markdownlint --fix DEPLOY.md
@@ -27,8 +19,6 @@ unit-tests: ## ERROR: No comment found for target unit-tests in ./Makefile
 
 integration-tests: ## ERROR: No comment found for target integration-tests in ./Makefile
 	touch coverage-integrations.out
-
-validate: ## ERROR: No comment found for target validate in ./Makefile
 
 build-docker: ## build a docker image from Dockerfile
 	docker build -t awesome:build ./build
