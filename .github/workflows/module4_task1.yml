@@ -17,7 +17,8 @@ jobs:
       - name: Create the image
         working-directory: module4_task1
         run: make build-docker
-      - working-directory: module4_task1
+      - name: Use Make help
+        working-directory: module4_task1
         run: docker run --rm awesome:build make help
       - name: Build the server
         working-directory: module4_task1
