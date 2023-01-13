@@ -14,9 +14,10 @@ RUN apt-get install -y make &&\
     rm /usr/local/bin/LICENSE &&\
     rm hugo.tar.gz &&\
     which hugo &&\
-    hugo mod init github.com/gasstin/holbertonschool-validation/module4_task1 &&\
+    hugo mod init github.com/gasstin/app &&\
     ls &&\
     echo "theme = [\"github.com/theNewDynamic/gohugo-theme-ananke\"]" >> config.toml && \
     echo "publishDir = \"dist\"" >> config.toml &&\
+    echo "fffff" &&\
     cat config.toml &&\
     npm install -g markdownlint-cli
