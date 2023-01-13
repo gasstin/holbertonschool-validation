@@ -14,9 +14,7 @@ RUN apt-get install -y make &&\
     rm /usr/local/bin/LICENSE &&\
     rm hugo.tar.gz &&\
     which hugo &&\
-    hugo mod init github.com/gasstin/app &&\
-    ls &&\
-    cat config.toml &&\
+    hugo mod init . &&\
     echo "aaaaa" &&\
     echo "theme = [\"github.com/theNewDynamic/gohugo-theme-ananke\"]" >> config.toml &&\
     echo "publishDir = \"dist\"" >> config.toml &&\
