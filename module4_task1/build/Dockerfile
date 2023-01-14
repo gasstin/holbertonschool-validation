@@ -4,13 +4,12 @@ COPY ./ /app
 
 WORKDIR /app
 
-RUN apk add docker&&\
-    apt-get update
+RUN apt-get update
 
 RUN apt-get install -y make
 
 RUN curl --silent --location -fsSL https://deb.nodesource.com/setup_16.x | bash - &&\
-    apt-get install -y nodejs
+    apt-get install -y nodejs docker
 
 RUN url=$(curl -s "https://api.github.com/repositories/11180687/releases/latest" | grep -o 'https://.*hugo_extended.*_Linux-64bit.tar.gz') &&\
     curl -s $url -L -o hugo.tar.gz &&\
