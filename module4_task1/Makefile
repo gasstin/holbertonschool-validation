@@ -29,4 +29,4 @@ integration-tests: ## ERROR: No comment found for target integration-tests in ./
 validate: ## ERROR: No comment found for target validate in ./Makefile
 
 build-docker: ## build a docker image from Dockerfile
-	docker build -t awesome:build ./build
+	docker build -t awesome:build ./build/Dockerfile .
