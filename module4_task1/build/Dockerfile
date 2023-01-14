@@ -9,7 +9,8 @@ RUN apt-get update
 RUN apt-get install -y make
 
 RUN curl --silent --location -fsSL https://deb.nodesource.com/setup_16.x | bash - &&\
-    apt-get install -y nodejs docker
+    apt-get install -y nodejs 
+RUN apt-get install -y docker
 
 RUN url=$(curl -s "https://api.github.com/repositories/11180687/releases/latest" | grep -o 'https://.*hugo_extended.*_Linux-64bit.tar.gz') &&\
     curl -s $url -L -o hugo.tar.gz &&\
@@ -22,6 +23,7 @@ RUN url=$(curl -s "https://api.github.com/repositories/11180687/releases/latest"
 RUN npm install -g markdownlint-cli &&\
     npm install markdownlint &&\
     which markdownlint &&\
+    echo "aaaaaaaaaaaaaaaaaa" &&\
     make lint
 
 RUN hugo mod init  github.com/gasstin/module4_task1
