@@ -15,7 +15,7 @@ package: ## produces a file awesome-website.zip, containing the binary awesome-a
 	zip -r awesome-website.zip dist/ awesome-api
 
 lint: ## update files README.md and DEPLOY.md to markdownlint
-	docker run --rm awesome:build sh -c "markdownlint --fix DEPLOY.md"
+	docker run --rm -i awesome:build sh -c "markdownlint --fix DEPLOY.md"
 
 help: ## shows commands
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
