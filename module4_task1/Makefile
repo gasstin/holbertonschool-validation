@@ -21,7 +21,7 @@ help: ## shows commands
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
 unit-tests: ## ERROR: No comment found for target unit-tests in ./Makefile
-	docker run --rm -i awesome:build sh -c "touch coverage-units.out"
+	touch coverage-units.out
 
 integration-tests: ## ERROR: No comment found for target integration-tests in ./Makefile
 	touch coverage-integrations.out
