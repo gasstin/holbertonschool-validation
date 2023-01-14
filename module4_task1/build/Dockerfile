@@ -4,7 +4,8 @@ COPY ./ /app
 
 WORKDIR /app
 
-RUN apt-get update
+RUN apk add docker&&\
+    apt-get update
 
 RUN apt-get install -y make
 
@@ -21,6 +22,7 @@ RUN url=$(curl -s "https://api.github.com/repositories/11180687/releases/latest"
 
 RUN npm install -g markdownlint-cli &&\
     npm install markdownlint &&\
-    which markdownlint
+    which markdownlint &&\
+    make lint
 
 RUN hugo mod init  github.com/gasstin/module4_task1

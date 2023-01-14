@@ -15,7 +15,7 @@ package: ## produces a file awesome-website.zip, containing the binary awesome-a
 	zip -r awesome-website.zip dist/ awesome-api
 
 lint: ## update files README.md and DEPLOY.md to markdownlint
-	docker run --rm awesome:build markdownlint --fix DEPLOY.md
+	docker run --rm awesome:build sh -c "markdownlint --fix DEPLOY.md"
 
 help: ## shows commands
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
@@ -29,4 +29,4 @@ integration-tests: ## ERROR: No comment found for target integration-tests in ./
 validate: ## ERROR: No comment found for target validate in ./Makefile
 
 build-docker: ## build a docker image from Dockerfile
-	docker build -t awesome:build -f ./build/Dockerfile .
+	docker build --no-cache -t awesome:build -f ./build/Dockerfile .
