@@ -31,5 +31,5 @@ RUN apt-get update \
     echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /root/.profile &&\
     echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /root/.profile &&\
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" &&\
-    apt-get install build-essential &&\
+    apt-get install -y build-essential &&\
     brew install hadolint
