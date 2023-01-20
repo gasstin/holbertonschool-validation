@@ -1,0 +1,53 @@
+name: module4_task2
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  push:
+
+  pull_request:
+    types: [opened, reopened]
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Clone the Repo
+        uses: actions/checkout@v3
+
+      - working-directory: module4_task2
+        run: ./setup.sh
+
+      - name: Create the image
+        working-directory: module4_task2
+        run: make build-docker
+
+      - name: Use Make help
+        working-directory: module4_task2
+        run: docker run --rm awesome:build make help
+
+      - name: Build the server
+        working-directory: module4_task2
+        run: docker run --rm awesome:build make build
+
+      - name: Use lint
+        working-directory: module4_task2
+        run: docker run --rm awesome:build make lint
+
+      - name: Use unit-test
+        working-directory: module4_task2
+        run: docker run --rm awesome:build make unit-tests
+
+      - name: Use integration-tests
+        working-directory: module4_task2
+        run: docker run --rm awesome:build make integration-tests
+
+      - name: Use docker tests
+        working-directory: module4_task2
+        run: docker run --rm awesome:build make docker-tests
+
+      - name: Save workflow
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifact-task2
+          path: module4_task2
+          /

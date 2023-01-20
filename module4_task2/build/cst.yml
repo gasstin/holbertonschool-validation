@@ -1,0 +1,4 @@
+fileExistenceTests:
+- name: 'Dockerfilw'
+  path: '../build/'
+  shouldExist: true
