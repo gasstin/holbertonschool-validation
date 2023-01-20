@@ -22,7 +22,7 @@ lint: ## update files README.md and DEPLOY.md to markdownlint
 	apt-get install -y nodejs
 	npm install -g markdownlint-cli || true
 	markdownlint --fix DEPLOY.md
-	docker run --rm -i hadolint/hadolint < ./build/Dockerfile
+	hadolint ./build/Dockerfile
 
 help: ## shows commands
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
