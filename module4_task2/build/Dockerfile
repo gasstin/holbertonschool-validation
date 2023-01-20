@@ -15,7 +15,7 @@ RUN apt-get update \
     # install hugo
     url=$(curl -s "https://api.github.com/repositories/11180687/releases/latest" | grep -o "https://.*hugo_extended.*_Linux-64bit.tar.gz") &&\
     curl -s $url -L -o "hugo.tar.gz" &&\
-    tar "-zxf hugo.tar.gz" -C "/usr/local/bin" &&\
+    tar -zxf "hugo.tar.gz" -C "/usr/local/bin" &&\
     rm "/usr/local/bin/README.md" &&\
     rm "/usr/local/bin/LICENSE" &&\
     rm "hugo.tar.gz" &&\
@@ -25,4 +25,4 @@ RUN apt-get update \
     npm install markdownlint &&\
     which markdownlint &&\
     # init hugo
-    hugo mod init  github.com/gasstin/module4_task1
+    hugo mod init github.com/gasstin/module4_task2
