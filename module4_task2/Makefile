@@ -22,7 +22,7 @@ lint: ## update files README.md and DEPLOY.md to markdownlint
 	apt-get install -y nodejs
 	npm install -g markdownlint-cli || true
 	markdownlint --fix DEPLOY.md
-	/bin/bash -c $(curl --silent -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)
+	/bin/bash -c "curl --silent -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh"
 	brew install hadolint
 	hadolint ./build/Dockerfile
 
