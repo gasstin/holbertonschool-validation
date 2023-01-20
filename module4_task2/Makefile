@@ -22,8 +22,7 @@ lint: ## update files README.md and DEPLOY.md to markdownlint
 	apt-get install -y nodejs
 	npm install -g markdownlint-cli || true
 	markdownlint --fix DEPLOY.md
-	wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64
-	chmod +x /bin/hadolint
+	wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 && chmod +x /bin/hadolint
 	brew install hadolint
 	hadolint ./build/Dockerfile
 
