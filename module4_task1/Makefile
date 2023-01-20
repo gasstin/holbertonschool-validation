@@ -1,9 +1,9 @@
 .PHONY: all build clean
 
 build: ## Creates the site.
-	curl -L https://github.com/gohugoio/hugo/releases/download/v0.109.0/hugo_extended_0.109.0_linux-amd64.deb -o hugo_server
-	apt install ./hugo_server
-	rm -rf ./hugo_server
+	curl -L https://github.com/gohugoio/hugo/releases/download/v0.109.0/hugo_extended_0.109.0_linux-amd64.deb -o hugo_server.deb
+	apt install ./hugo_server.deb
+	rm -rf ./hugo_server.deb
 	hugo
 	touch awesome-api
 
