@@ -55,3 +55,4 @@ Then, update the Makefile to:
   * Run any existing instruction inside the Docker Image awesome:build ( go build, hugo , golangci-lint , go test , etc….) using docker run <option> awesome:build <commands> commands.
 
 * Use `make build-docker` to build the Docker image.
+* Use `make docker-tests` to execute the tests.
