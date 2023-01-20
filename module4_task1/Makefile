@@ -15,8 +15,6 @@ package: ## produces a file awesome-website.zip, containing the binary awesome-a
 	zip -r awesome-website.zip dist/ awesome-api
 
 lint: ## update files README.md and DEPLOY.md to markdownlint
-	curl --silent --location -fsSL https://deb.nodesource.com/setup_16.x | bash -
-    	apt-get install -y nodejs
 	npm install -g markdownlint-cli || true
 	markdownlint --fix DEPLOY.md
 
