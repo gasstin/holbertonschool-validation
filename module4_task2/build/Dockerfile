@@ -19,10 +19,10 @@ RUN apt-get update \
     rm "/usr/local/bin/README.md" &&\
     rm "/usr/local/bin/LICENSE" &&\
     rm "hugo.tar.gz" &&\
-    command -v hugo
+    command -v hugo &&\
     # markdownlint
     npm install -g markdownlint-cli &&\
     npm install markdownlint &&\
-    command -v markdownlint
+    command -v markdownlint &&\
     # init hugo
     hugo mod init github.com/gasstin/module4_task2
