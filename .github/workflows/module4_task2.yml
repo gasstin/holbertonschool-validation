@@ -49,5 +49,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: artifact-task2
-          path: module4_task2
-          /
+          path: module4_task2/
