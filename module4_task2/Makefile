@@ -22,6 +22,7 @@ lint: ## update files README.md and DEPLOY.md to markdownlint
 	apt-get install -y nodejs
 	npm install -g markdownlint-cli || true
 	markdownlint --fix DEPLOY.md
+	apt-get install -y wget
 	wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64
 	sleep 3
 	chmod +x /bin/hadolint
