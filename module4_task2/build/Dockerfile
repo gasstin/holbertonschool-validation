@@ -6,12 +6,12 @@ WORKDIR /app
 
 RUN apt-get update \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* &&\
     # install make
-    apt-get install -y make --no-install-recommends
+    apt-get install -y make --no-install-recommends &&\
     # install node
     curl --silent --location -fsSL https://deb.nodesource.com/setup_16.x | bash - &&\
-    apt-get install -y nodejs --no-install-recommends
+    apt-get install -y nodejs --no-install-recommends &&\
     # install hugo
     url=$(curl -s "https://api.github.com/repositories/11180687/releases/latest" | grep -o 'https://.*hugo_extended.*_Linux-64bit.tar.gz') &&\
     curl -s $url -L -o hugo.tar.gz &&\
@@ -19,10 +19,10 @@ RUN apt-get update \
     rm /usr/local/bin/README.md &&\
     rm /usr/local/bin/LICENSE &&\
     rm hugo.tar.gz &&\
-    which hugo
+    which hugo &&\
     # markdownlint
     npm install -g markdownlint-cli &&\
     npm install markdownlint &&\
-    which markdownlint
+    which markdownlint &&\
     # init hugo
     hugo mod init  github.com/gasstin/module4_task1
