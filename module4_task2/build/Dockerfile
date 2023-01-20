@@ -25,4 +25,4 @@ RUN apt-get update \
     npm install markdownlint &&\
     which markdownlint &&\
     # init hugo
-    hugo mod init github.com/gasstin/module4_task2 &&\
+    hugo mod init github.com/gasstin/module4_task2
