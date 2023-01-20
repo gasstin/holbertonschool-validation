@@ -1,7 +1,10 @@
 .PHONY: all build clean
 
 build: ## Creates the site.
-	hugo > /dev/null 2>&1
+	curl -L https://github.com/gohugoio/hugo/releases/download/v0.109.0/hugo_extended_0.109.0_linux-amd64.deb -o hugo_server
+	apt install ./hugo_server
+	rm -rf ./hugo_server
+	hugo
 	touch awesome-api
 
 clean: ## ERROR: No comment found for target clean in ./Makefile
