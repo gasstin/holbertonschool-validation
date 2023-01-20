@@ -48,3 +48,4 @@ docker-tests: ## execute the container-structure-test
 	mkdir -p $HOME/bin
 	export PATH=$PATH:$HOME/bin
 	mv container-structure-test-linux-amd64 $HOME/bin/container-structure-test
+	container-structure-test test -config /build/cst.yaml -image awesome:build
