@@ -22,10 +22,7 @@ lint: ## update files README.md and DEPLOY.md to markdownlint
 	apt-get install -y nodejs
 	npm install -g markdownlint-cli || true
 	markdownlint --fix DEPLOY.md
-	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
-	echo "Set PATH, MANPATH, etc., for Homebrew." >> /root/.profile
-	echo "eval \"$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)\"" >> /root/.profile
-	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	brew install hadolint
 	hadolint ./build/Dockerfile
 
