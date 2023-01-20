@@ -28,4 +28,8 @@ RUN apt-get update \
     hugo mod init github.com/gasstin/module4_task2 &&\
     # hadolint
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" &&\
+    echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /root/.profile &&\
+    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /root/.profile &&\
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" &&\
+    apt-get install build-essential &&\
     brew install hadolint
