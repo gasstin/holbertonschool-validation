@@ -1,9 +1,4 @@
 ---
-schemaVersion: 2.0.0
-
-metadataTest:
-  entrypoint: ["/build/Dockerfile"]
-
 fileExistenceTests:
   - name: 'Dockerfile'
     path: '../build/'
